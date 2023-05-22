@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Listado de vacantes</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+	integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+	crossorigin="anonymous">
+
+</head>
+<body>
+<!-- para a�adir la imagen, en este caso la imagen se llama logo, si se llamase cabra seria cabra.png-->
+
+	<h1 class="text-info">Listado de pofesionales</h1>
+
+
+	<table class="table table-striped table-bordered table-hover">
+  
+	
+  
+		<tr>
+	
+			
+			<th>Nombre</th>
+			<th>Apellido</th>
+			
+			<th>Especialidad</th>
+			<th>Detalle</th>
+		
+			
+			
+		</tr>
+		<!-- Antes he usado "tmpmp"como variable temporal ahora uso variable y lo podria llamar camion, pero entonces donde pone vacante en lo demas deberia poner camion-->
+		<!-- Todo se llama variable , pero est� definida aqu� no en en el main/java sino en el HTML-->
+		<tr th:each="vacantes:${profesionales}">
+		
+			
+			
+			<td th:text="${vacantes.nombre}"></td>
+			<td th:text="${vacantes.apellido}"></td>
+			
+			<td>
+   <span th:if="${vacantes.especialidad == 1}">Odontologia</span>
+   <span th:if="${vacantes.especialidad == 2}">Cardiologia</span>
+   <span th:if="${vacantes.especialidad == 3}">Dermatologa</span>
+   <span th:if="${vacantes.especialidad == 4}">Medico Familiar</span>
+</td>
+<td>
+			<a th:href="@{/vacantes/view/{id} (id=${vacantes.id})}" class="btn btn-success">Detalle</a>
+			
+			</td>
+			
+		</tr>
+
+	</table>
+	
+	
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+	crossorigin="anonymous"></script>
+
+</body>
+</html>

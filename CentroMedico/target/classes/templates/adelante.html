@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+	integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+	crossorigin="anonymous">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">SaludAte</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#navbarNav" aria-controls="navbarNav"
+			aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active dropdown">
+    
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Inicio
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="/especialidad?especialidad=1">Odontología</a>
+    <a class="dropdown-item" href="/especialidad?especialidad=2">Cardiología</a>
+    <a class="dropdown-item" href="/especialidad?especialidad=3">Dermatología</a>
+    <a class="dropdown-item" href="/especialidad?especialidad=4">Familiar</a>
+  </div>
+</li>
+
+
+
+				<li class="nav-item"><a class="nav-link" href="/descripcion">Profesionales</a></li>
+				
+			</ul>
+			<ul class="navbar-nav ml-auto"></ul>
+		</div>
+	</nav>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<body>
+	<div class="image-container">
+	<img src="salud1.jpg" />
+	<h1>
+		Bienvenido: <span
+			th:text="${usuario.nombre } +' ' + ${usuario.apellido}"></span>
+	</h1>
+	<h4>"Donde quiera que se ama el arte de la Medicina se ama también a la humanidad."<div/> -Hipócrates</h4>
+</div>
+
+<div class="text-container">
+	<h2>Clínica Médica</h2>
+</div>
+
+</body>
+
+<style>
+html, body {
+	height: 77%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image: url("salud1.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat; /* Añade esta línea */
+}
+
+.image-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.image-container img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.image-container h1 {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	color: black;
+}
+
+.text-container {
+	position: relative;
+	width: 100%;
+	padding-top: 20px;
+	height: 100px;
+	background-color: #FFFFFF;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 70px;
+	margin-bottom: 30px;
+}
+
+.text-container h2 {
+	font-size: 2em;
+	color: black;
+	margin-bottom: 20px;
+	margin: 0;
+	border-bottom: 8px solid #ccc
+}h4 {
+    position: absolute;
+	top: 280px;
+	left: 20px;
+	color: black;
+	font-family: 'Times New Roman', Times, serif;
+}
+
+
+h5 {
+	text-align: center;
+	margin-top: 30px;
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+}
+</style>
+<div></div>
+<div>
+	<h5>En nuestro centro de salud, nos preocupamos por tu bienestar.
+		Ofrecemos una atención médica integral y personalizada para ayudarte a
+		mejorar tu calidad de vida.</h5>
+
+</div>
+
+<div class="text-container">
+	<h2>Nuestros tratamientos</h2>
+</div>
+<div>
+	<h5>"SaludAte" es un centro de salud especializado en
+		cardiología, odontología y dermatología. Nuestro equipo de expertos y
+		tecnología avanzada ofrecen atención personalizada para mantener la
+		salud cardiovascular, dental y cutánea de nuestros pacientes. Ven y
+		descubre cómo podemos ayudarte</h5>
+
+</div>
+
+<div class="d-flex justify-content-center">
+	<div class="text-center">
+		<figure>
+			<img src="medico1.jpg" class="rounded float-start"
+				style="height: 190px;">
+			<figcaption>Más de 15 años de experiencia</figcaption>
+		</figure>
+	</div>
+	<div class="text-center">
+		<figure>
+			<img src="medico2.jpg" class="rounded" style="height: 190px;">
+			<figcaption>Tecnología puntera</figcaption>
+		</figure>
+	</div>
+	<div class="text-center">
+		<figure>
+			<img src="medico3.jpg" class="rounded float-end"
+				style="height: 190px;">
+			<figcaption>Lo primero eres tú</figcaption>
+		</figure>
+	</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+	integrity="sha384-/4L4lHQ4ZKFqGNYKP5QzqQMGnZUq3GhRxrQpoUNH4V9HuZa8T+fRlGyJbKGhooO1"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+	crossorigin="anonymous"></script>
+
+
+</body>
+</html>
